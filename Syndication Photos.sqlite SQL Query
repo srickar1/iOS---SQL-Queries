@@ -172,20 +172,7 @@ SELECT zAsset.Z_PK AS 'zAsset-zPK',
   zAsset.ZVIDEOCPVISIBILITYSTATE AS 'zAsset-Video CP Visibility State',
   zAddAssetAttr.ZVIDEOCPDISPLAYVALUE AS 'zAddAssetAttr-Video CP Display Value',
   zAddAssetAttr.ZVIDEOCPDISPLAYTIMESCALE AS 'zAddAssetAttr-Video CP Display Time Scale',
-  CASE zAsset.ZCLOUDPLACEHOLDERKIND
-    WHEN 0 THEN '0-Local&CloudMaster Asset-0'
-    WHEN 1 THEN '1-StillTesting-1'
-    WHEN 2 THEN '2-StillTesting-2'
-    WHEN 3 THEN '3-JPG-Asset_Only_PhDa/Thumb/V2-3'
-    WHEN 4 THEN '4-LPL-JPG-Asset_CPLAsset-OtherType-4'
-    WHEN 5 THEN '5-Asset_synced_CPL_2_Device-5'
-    WHEN 6 THEN '6-StillTesting-6'
-    WHEN 7 THEN '7-LPL-poster-JPG-Asset_CPLAsset-MP4-7'
-    WHEN 8 THEN '8-LPL-JPG_Asset_CPLAsset-LivePhoto-MOV-8'
-    WHEN 9 THEN '9-CPL_MP4_Asset_Saved_2_LPL-9'
-    ELSE 'Unknown-New-Value!: ' || zAsset.ZCLOUDPLACEHOLDERKIND || ''
-  END AS 'zAsset-Cloud Placeholder Kind',
-  CASE zAsset.ZSYNDICATIONSTATE
+    CASE zAsset.ZSYNDICATIONSTATE
     WHEN 0 THEN '0-Local-PL_Asset_Syndication_State_NA-0'
     ELSE 'Unknown-New-Value!: ' || zAsset.ZSYNDICATIONSTATE || ''
   END AS 'zAsset-Syndication State-LPL',
